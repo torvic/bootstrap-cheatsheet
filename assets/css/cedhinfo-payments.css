@@ -1,0 +1,49 @@
+/* ************** Custom Properties ************** */
+:root {
+	--first-color: #000720;
+	--second-color: #091545;
+	--third-color: #192A69;
+	--fourth-color: #425BFF;
+	--fifth-color: #6096FF;
+	--white-color: #ffffff;
+	--gray-color: #828A9A;
+	--font: 'Rubik', sans-serif;
+}
+/* ************** Reset ************** */
+body {
+	font-family: var(--font) !important;
+	font-size: 16px;
+}
+/* ************** Components ************** */
+/* ============== Button ============== */
+button {
+	color: var(--white-color);
+	background: #425BFF;
+	font-weight: 300;
+	border-radius: 6px;
+	border: 0;
+}
+
+/* ============== UserRegister ============== */
+.user-register {
+	margin: 1rem;
+	background: #fff;
+	display: flex;
+	justify-content: space-between;
+}
+.user-register__figure {
+	margin: 0;
+	width: 137px;
+	height: 154px;
+	background: #6096FF;
+}
+/* ************** Utilities ************** */
+.bg-gray {
+	background: #EEF0F8;
+}
+.bg-blue {
+	background: #6096FF;
+}
+/* ************** Site Styles ************** */
+
+
