@@ -19,77 +19,82 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     ></script>
+    <style>
+      @media (min-width: 909px) {
+        .register-position {
+					position: sticky;
+          top: 95px;
+          right: 30px;
+        }
+      }
+    </style>
   </head>
   <body>
-    <h1>Practicando Bootstrap 4</h1>
-    <p class="font-weight-light">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aperiam sint
-      in numquam odit velit perferendis vero voluptates quos qui!
-    </p>
-    <h2>Ejercicio 1</h2>
-    <p>Usuarios registrados:</p>
-    <p class="h1">h1. Bootstrap heading</p>
-    <p class="h2">h2. Bootstrap heading</p>
-    <p class="h3">h3. Bootstrap heading</p>
-    <p class="h4">h4. Bootstrap heading</p>
-    <p class="h5">h5. Bootstrap heading</p>
-    <p class="h6">h6. Bootstrap heading</p>
-    <p class="font-weight-bold">Bold text.</p>
-    <p class="font-weight-bolder">
-      Bolder weight text (relative to the parent element).
-    </p>
-    <p class="font-weight-normal">Normal weight text.</p>
-    <p class="font-weight-light">Light weight text.</p>
-    <p class="font-weight-lighter">
-      Lighter weight text (relative to the parent element).
-    </p>
-    <p class="font-italic">Italic text.</p>
-
-		<h3>This is with BEM css</h3>
-		<div class="e-container">
-			<div class="container">
-				<div class="user-register">
-					<div>
-						<figure class="user-register__figure">
-							<img class="user-register__img" src="" alt="">
-						</figure>
-						<div class="user-register__actions">
-							<h2 class="user-register__title">Usuarios registrados</h2>
-							<button class="button">
-								Agregar Usuario +
-							</button>
-						</div>
-					</div>
-					<div class="user-register__info">
-						<span class="user-register__number">123</span>
-						<p class="user-register__text">Usuarios en total</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<h3>This is with Bootstrap</h3>
-		<div class="bg-gray p-3">
-			<div class="container">
-				<div class="d-flex justify-content-between bg-light">
-					<div class="d-flex w-50">
-						<figure class="w-25 h-25 bg-blue">
-							<img src="" alt="" srcset="">
-						</figure>
-						<div class="p-3">
-							<h2>Usuarios Registrados</h2>
-							<button>Agregar Usuario +</button>
-						</div>
-					</div>
-					<div class="p-3">
-						<span>123</span>
-						<p>Usuarios en total</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-
+    <header class="border border-success sticky-top">
+      <p>Este es el header</p>
+    </header>
+    <main>
+      <div class="">
+        <section class="border border-dark bg-primary w-100">
+          <div>
+            <p>Primera seccion</p>
+            <p>Primera seccion</p>
+            <p>Primera seccion</p>
+            <p>Primera seccion</p>
+            <p>Primera seccion</p>
+          </div>
+        </section>
+        <section
+          class="border border-dark bg-success register-position"
+        >
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+          <p>Segunda seccion</p>
+        </section>
+      </div>
+      <div>
+        <section class="border border-dark bg-danger">
+          <div>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+            <p>Tercera seccion</p>
+          </div>
+        </section>
+        <section class="border border-dark bg-info">
+          <div>
+            <p>Cuarta seccion</p>
+            <p>Cuarta seccion</p>
+            <p>Cuarta seccion</p>
+            <p>Cuarta seccion</p>
+            <p>Cuarta seccion</p>
+            <p>Cuarta seccion</p>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer class="border border-success">Este es el pie de pagina</footer>
     <script src="./assets/js/bootstrap.bundle.js"></script>
   </body>
 </html>
