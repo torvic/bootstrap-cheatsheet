@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="./assets/css/bootstrap.css" />
+    <link rel="stylesheet" href="./assets/css/cedhinfo-payments.css" />
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <title>Form validation with Vue.js</title>
+  </head>
+  <body>
+    <div id="app">
+      <div class="container">
+        <h1>Form validation with Vue.js</h1>
+        <h2>Validation Form</h2>
+        <div class="d-flex justify-content-center">
+          <div class="card">
+            <div class="card-body">
+              <form @submit="checkForm">
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    v-model="name"
+                    class="form-control"
+                    :class="{'is-invalid': error}"
+                    placeholder="Nombres"
+                  />
+                  <div class="invalid-feedback">Nombres es requerido</div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="text"
+                    name="lastName"
+                    v-model="lastName"
+                    :class="{'is-invalid': error}"
+                    class="form-control"
+                    placeholder="Apellidos"
+                  />
+                  <div class="invalid-feedback">Apellidos es requerido</div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="email"
+                    name="email"
+                    v-model="email"
+                    :class="{'is-invalid': error}"
+                    class="form-control"
+                    placeholder="Correo"
+                  />
+                  <div class="invalid-feedback">Correo es requerido</div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    name="password"
+                    v-model="password"
+                    :class="{'is-invalid': error}"
+                    class="form-control"
+                    placeholder="Contraseña"
+                  />
+                  <div class="invalid-feedback">Contraseña es requerido</div>
+                </div>
+                <div class="form-group">
+                  <input
+                    type="password"
+                    name="repeatPassword"
+                    v-model="repeatPassword"
+                    :class="{'is-invalid': error}"
+                    class="form-control"
+                    placeholder="Repita Contraseña"
+                  />
+                  <div class="invalid-feedback">Contraseña es requerido</div>
+                </div>
+                <button class="btn btn-primary" type="submit">
+                  Submit form
+                </button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      const app = new Vue({
+        el: '#app',
+        data() {
+          return {
+            error: false,
+            name: null,
+            lastName: null,
+            email: null,
+            password: null,
+            repeatPassword: null,
+          }
+        },
+        methods: {
+          checkForm(e) {
+            console.log('Validando...')
+            if (!this.name) {
+              this.error = true
+            }
+            if (!this.lastName) {
+              this.error = true
+            }
+            if (!this.email) {
+              this.error = true
+            }
+            if (!this.password) {
+              this.error = true
+            }
+            if (!this.repeatPassword) {
+              this.error = true
+            }
+            e.preventDefault()
+          },
+        },
+      })
+    </script>
+  </body>
+</html>

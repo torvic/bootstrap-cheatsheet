@@ -21,74 +21,189 @@
     ></script>
   </head>
   <body>
-    <h1>Practicando Bootstrap 4</h1>
-    <p class="font-weight-light">
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ab aperiam sint
-      in numquam odit velit perferendis vero voluptates quos qui!
-    </p>
-    <h2>Ejercicio 1</h2>
-    <p>Usuarios registrados:</p>
-    <p class="h1">h1. Bootstrap heading</p>
-    <p class="h2">h2. Bootstrap heading</p>
-    <p class="h3">h3. Bootstrap heading</p>
-    <p class="h4">h4. Bootstrap heading</p>
-    <p class="h5">h5. Bootstrap heading</p>
-    <p class="h6">h6. Bootstrap heading</p>
-    <p class="font-weight-bold">Bold text.</p>
-    <p class="font-weight-bolder">
-      Bolder weight text (relative to the parent element).
-    </p>
-    <p class="font-weight-normal">Normal weight text.</p>
-    <p class="font-weight-light">Light weight text.</p>
-    <p class="font-weight-lighter">
-      Lighter weight text (relative to the parent element).
-    </p>
-    <p class="font-italic">Italic text.</p>
-
-		<h3>This is with BEM css</h3>
-		<div class="e-container">
-			<div class="container">
-				<div class="user-register">
-					<div>
-						<figure class="user-register__figure">
-							<img class="user-register__img" src="" alt="">
-						</figure>
-						<div class="user-register__actions">
-							<h2 class="user-register__title">Usuarios registrados</h2>
-							<button class="button">
-								Agregar Usuario +
-							</button>
-						</div>
-					</div>
-					<div class="user-register__info">
-						<span class="user-register__number">123</span>
-						<p class="user-register__text">Usuarios en total</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
-		<h3>This is with Bootstrap</h3>
-		<div class="bg-gray p-3">
-			<div class="container">
-				<div class="d-flex justify-content-between bg-light">
-					<div class="d-flex w-50">
-						<figure class="w-25 h-25 bg-blue">
-							<img src="" alt="" srcset="">
-						</figure>
-						<div class="p-3">
-							<h2>Usuarios Registrados</h2>
-							<button>Agregar Usuario +</button>
-						</div>
-					</div>
-					<div class="p-3">
-						<span>123</span>
-						<p>Usuarios en total</p>
-					</div>
-				</div>
-			</div>
-		</div>
-
+    <div class="container">
+      <h1>Validacion en formularios Bootstrap 4</h1>
+      <hr />
+      <h2>Simple Form</h2>
+      <div class="d-flex justify-content-center">
+        <div class="card">
+          <div class="card-body">
+            <form>
+              <div class="form-group">
+                <label for="exampleInputEmail1">Email address</label>
+                <input
+                  type="email"
+                  class="form-control"
+                  id="exampleInputEmail1"
+                  aria-describedby="emailHelp"
+                />
+                <small id="emailHelp" class="form-text text-muted"
+                  >We'll never share your email with anyone else.</small
+                >
+              </div>
+              <div class="form-group">
+                <label for="exampleInputPassword1">Password</label>
+                <input
+                  type="password"
+                  class="form-control"
+                  id="exampleInputPassword1"
+                />
+              </div>
+              <div class="form-group form-check">
+                <input
+                  type="checkbox"
+                  class="form-check-input"
+                  id="exampleCheck1"
+                />
+                <label class="form-check-label" for="exampleCheck1"
+                  >Check me out</label
+                >
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <h2>Form Grid</h2>
+      <div class="d-flex justify-content-center">
+        <div class="card">
+          <div class="card-body">
+            <form>
+              <div class="row">
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                    />
+                  </div>
+                </div>
+                <div class="col">
+                  <div class="form-group">
+                    <label for="exampleInputPassword1">Password</label>
+                    <input
+                      type="password"
+                      class="form-control"
+                      id="exampleInputPassword1"
+                    />
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="inputAddress">Address</label>
+                <input
+                  type="text"
+                  class="form-control"
+                  id="inputAddress"
+                  placeholder="1234 Main St"
+                />
+              </div>
+              <button type="submit" class="btn btn-primary">Submit</button>
+            </form>
+          </div>
+        </div>
+      </div>
+      <hr />
+      <h2>Validation Form</h2>
+      <div class="d-flex justify-content-center">
+        <div class="card">
+          <div class="card-body">
+            <form>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationServer01">First name</label>
+                  <input
+                    type="text"
+                    class="form-control is-valid"
+                    id="validationServer01"
+                    value="Mark"
+                    required
+                  />
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+                <div class="col-md-6 mb-3">
+                  <label for="validationServer02">Last name</label>
+                  <input
+                    type="text"
+                    class="form-control is-valid"
+                    id="validationServer02"
+                    value="Otto"
+                    required
+                  />
+                  <div class="valid-feedback">Looks good!</div>
+                </div>
+              </div>
+              <div class="form-row">
+                <div class="col-md-6 mb-3">
+                  <label for="validationServer03">City</label>
+                  <input
+                    type="text"
+                    class="form-control is-invalid"
+                    id="validationServer03"
+                    aria-describedby="validationServer03Feedback"
+                    required
+                  />
+                  <div id="validationServer03Feedback" class="invalid-feedback">
+                    Please provide a valid city.
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="validationServer04">State</label>
+                  <select
+                    class="custom-select is-invalid"
+                    id="validationServer04"
+                    aria-describedby="validationServer04Feedback"
+                    required
+                  >
+                    <option selected disabled value="">Choose...</option>
+                    <option>...</option>
+                  </select>
+                  <div id="validationServer04Feedback" class="invalid-feedback">
+                    Please select a valid state.
+                  </div>
+                </div>
+                <div class="col-md-3 mb-3">
+                  <label for="validationServer05">Zip</label>
+                  <input
+                    type="text"
+                    class="form-control is-invalid"
+                    id="validationServer05"
+                    aria-describedby="validationServer05Feedback"
+                    required
+                  />
+                  <div id="validationServer05Feedback" class="invalid-feedback">
+                    Please provide a valid zip.
+                  </div>
+                </div>
+              </div>
+              <div class="form-group">
+                <div class="form-check">
+                  <input
+                    class="form-check-input is-invalid"
+                    type="checkbox"
+                    value=""
+                    id="invalidCheck3"
+                    aria-describedby="invalidCheck3Feedback"
+                    required
+                  />
+                  <label class="form-check-label" for="invalidCheck3">
+                    Agree to terms and conditions
+                  </label>
+                  <div id="invalidCheck3Feedback" class="invalid-feedback">
+                    You must agree before submitting.
+                  </div>
+                </div>
+              </div>
+              <button class="btn btn-primary" type="submit">Submit form</button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
 
     <script src="./assets/js/bootstrap.bundle.js"></script>
   </body>
